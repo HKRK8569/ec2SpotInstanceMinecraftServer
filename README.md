@@ -1,0 +1,1 @@
+# ec2_spot_instance_minecraft_server
