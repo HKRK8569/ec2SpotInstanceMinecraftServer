@@ -1,0 +1,14 @@
+[Unit]
+Description=Start&stop sample service.
+After=syslog.target network-online.target
+
+[Service]
+Type=oneshot
+User=ec2-user
+RemainAfterExit=yes
+KillMode=none
+ExecStart=/home/ec2-user/minecraft_start.sh
+ExecStopPost=/home/ec2-user/minecraft_stop.sh
+
+[Install]
+WantedBy=multi-user.target
