@@ -7,13 +7,13 @@ import {
 
 export const handler = async (event) => {
   const ec2Client = new EC2Client();
-  const amiId = "ami-063271539581281bc";
+  const amiId = "<amiId>";
   const instanceParams = {
     MaxCount: 1,
     MinCount: 1,
     ImageId: amiId,
     InstanceType: "t3.large",
-    KeyName: "key_pare1",
+    KeyName: "<keyPareName>",
     EbsOptimized: true,
     NetworkInterfaces: [
       {
@@ -34,7 +34,7 @@ export const handler = async (event) => {
       },
     ],
     IamInstanceProfile: {
-      Arn: "arn:aws:iam::767397761717:instance-profile/minecraft_server_role",
+      Arn: "<iamRole>",
     },
     InstanceMarketOptions: {
       MarketType: "spot",

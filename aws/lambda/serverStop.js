@@ -6,7 +6,7 @@ import {
 
 export const handler = async (event) => {
   const ec2Client = new EC2Client();
-  const amiId = "ami-063271539581281bc";
+  const amiId = "<amiId>";
   const describeParams = {
     Filters: [
       {
