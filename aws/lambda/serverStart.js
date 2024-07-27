@@ -61,7 +61,8 @@ export const handler = async (event) => {
 
     const instances = amiDescribeInstancesData.Reservations.reduce(
       (instanceList, reservation) => {
-        return instanceList.push(...reservation.Instances);
+        instanceList.push(...reservation.Instances);
+        return instanceList;
       },
       []
     );
